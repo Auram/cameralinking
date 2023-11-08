@@ -17,7 +17,6 @@ The properties are simply booleans that determine whether a collection is visibl
 ## Known Issues
 
 - Renaming a camera causes the visibility state of previously linked custom properties to return to True as True is the default. I couldn't figure out a way to inherit the state of the camera before the rename.
-- Making a new file with the addon enabled does not immediately active the addon. Simply toggle the addon in the Preferences pane to fix this.
 
 If you have more experience than me in making Blender addons then feel free to try and fix the aforementioned issues. I also attempted to add a UI Panel, but couldn't quite figure out how to properly display the custom properties in the panel.
 
