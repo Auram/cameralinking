@@ -1,8 +1,8 @@
 bl_info = {
     "name": "Camera Linking",
-    "description": "Adds the ability to disable/enable visibility of collections based on active camera.",
+    "description": "Control visibility of collections based on active camera.",
     "author": "Dylan Alexander",
-    "version": (0, 1),
+    "version": (0, 2),
     "blender": (3, 3, 0),  # Blender version compatibility
     "category": "Camera",
     "auto": True
@@ -10,9 +10,10 @@ bl_info = {
 
 import bpy
 from bpy.props import BoolProperty
+from bpy.app.handlers import persistent
 
 ### Visbility Toggling ###
-
+@persistent
 def toggle_visibility(dummy):
 
     camera_names = [obj.name for obj in bpy.data.objects if obj.type == 'CAMERA']
@@ -41,6 +42,7 @@ def toggle_visibility(dummy):
             collection.hide_render = True
 
 # Function to add custom properties to collections
+@persistent
 def add_camera_custom_properties(dummy):
     # Get the list of cameras in the scene
     cameras = [obj for obj in bpy.data.objects if obj.type == "CAMERA"]
