@@ -3,7 +3,7 @@
 
 This is a Blender addon that adds custom properties to collections that allow control over visibilty based on active camera.
 
-The properties are simply booleans that determine whether a collection is visible in the viewport/render based on its True or False value.
+The properties are simply booleans that determine whether a collection is visible in the viewport/render based on its True or False value. There's a simple panel to control visibility toggling in the viewport sidebar.
 
 **Demo Video:** https://youtu.be/89Xfj3Pts_U
 
